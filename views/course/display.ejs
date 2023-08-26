@@ -1,0 +1,37 @@
+<%- include('../header.ejs') %>
+<br><br><br>
+  <h1>course display</h1>
+  <div class="container">
+    <table class="table table-bordered">
+        <tr>
+            <th>S.No</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phoneno</th>
+            <th>status</th>
+            <th>action</th>
+
+        </tr>
+        <% i=1 %>
+        <% d.forEach((c)=>{ %>
+          <tr>
+            <td><%= i++ %></td>
+            <td><%= c.name %></td>
+            <td><%= c.email %></td>
+            <td><%= c.mobile %></td>
+            <td><%= c.status %></td>
+            <td>
+                <a href="/courseview/<%= c._id %>" class="btn btn-info">view</a>
+                <a href="/courseedit/<%= c._id %>" class="btn btn-success">edit</a>
+                <!-- <a href="/coursedelete/<%= c._id %>" class="btn btn-danger">delete</a> -->
+                
+            </td>
+        </tr>
+       <% }) %>
+        
+      
+       
+    </table>
+
+  </div>
+<%- include('../footer.ejs') %>

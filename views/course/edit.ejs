@@ -1,0 +1,71 @@
+<%- include('../header.ejs') %>
+<br><br><br>
+  <h1>course edit</h1>
+  <div class="container">
+    <table class="row">
+      <div class="coll-md-4"></div>
+      <div class="coll-md-4">
+        <form action="/courseupdate/<%= d._id%>" method="post">
+          <div class="mb-3">
+             <label>Name:</label>
+             <input type="text" value="<%=d.name %>" class="form-control" name="name" placeholder="name">
+          </div>
+          <div class="mb-3">
+             <label>Email:</label>
+             <input type="email" value="<%=d.email %>" class="form-control" name="email" placeholder="email:">
+          </div>
+          <div class="mb-3">
+             <label>Mobile No:</label>
+             <input type="number" value="<%=d.mobile %>"class="form-control" name="mobile" placeholder="mobilenumber:">
+          </div>
+          <div class="mb-3">
+             <label>D.O.B.:</label>
+             <input type="date" value="<%=d.dob %>" class="form-control" name="dob">
+          </div>
+          <div class="mb-3">
+             <label class="mb-2" >Gender:</label><br>
+             <input type="radio" name="gender" value="male" <%= d.gender=='male'?'checked':'' %>>male &nbsp;
+             <input type="radio" name="gender" value="female" <%= d.gender=='female'?'checked':'' %>>female &nbsp;
+          </div>
+          <div class="mb-3">
+             <label>Address:</label>
+            <textarea name="address"  class="form-control"><%=d.address %></textarea>
+          </div>
+          <div class="mb-3">
+             <label>Select College:</label>
+             <select name="college" class="form-control">
+                <option>Select</option>
+                <option <%= d.college=='MITS'?'selected':'' %>>MITS</option>
+                <option <%= d.college=='RJIT'?'selected':'' %>>RJIT</option>
+                <option <%= d.college=='ITM'?'selected':'' %>>ITM</option>
+                <option <%= d.college=='NITM'?'selected':'' %>>NITM</option>
+             </select>
+          </div>
+          <div class="mb-3">
+             <label>Select Course:</label>
+             <select name="course" class="form-control">
+                <option>Select</option>
+                <option <%= d.course=='B.Tech'?'selected':'' %>>B.Tech</option>
+             </select>
+          </div>
+          <div class="mb-3">
+             <label>Select Branch:</label>
+             <select name="branch" class="form-control">
+                <option>Select</option>
+                <option <%= d.branch=='CSE'?'selected':'' %>>CSE</option>
+                <option <%= d.branch=='IT'?'selected':'' %>>IT</option>
+                <option <%= d.branch=='EC'?'selected':'' %>>EC</option>
+                <option <%= d.branch=='ET'?'selected':'' %>>ET</option>
+                <option <%= d.branch=='ME'?'selected':'' %>>ME</option>
+                <option <%= d.branch=='EE'?'selected':'' %>>EE</option>
+             </select>
+          </div>
+          <div class="mb-3 text-center">
+             <button type="submit" class="btn btn-info">Update</button>
+          </div>
+         </form>
+      </div>
+      <div class="coll-md-4"></div>
+    </div>
+  </div>
+<%- include('../footer.ejs') %>

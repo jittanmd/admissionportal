@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+.login{
+    background-color: #12587a;
+}
+.card{
+    margin: 0 100px;
+    border-radius: 10px;
+}
+.login1 img{
+    align-items: center;
+}
+.login1 a{
+    color: #393f81;
+}
+.login button{
+    background: #12587a;
+    color:#ffff;
+}
+.login1 h1{
+    color: #12587a;
+}
+.n img{
+    width: 100px;
+}
+.navbar{
+    background-color: #7f7f7fd4;
+}
+.nav-link{
+    font-size:20px;
+    color: white;
+    font-weight: bold;
+}
+.navbar-nav li {
+    padding: 0 10px;
+}
+.nav-link:hover{
+   background-color: #35b9dd;
+   border-radius: 10px;
+}
+.carousel-item img{
+    height: 600px;
+}
+.card1:hover{
+    background-color: #f9b81e;
+}
+.card2:hover{
+    background-color: #37a2a7;
+}.card3:hover{
+    background-color: #fb7576;
+}
+.footer1{
+    background-color:#2a94b1;
+}

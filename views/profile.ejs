@@ -1,0 +1,48 @@
+<%- include('./header.ejs') %>
+<br><br><br><br>
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-6">
+      <h1>Change Password</h1>
+      <br><br><br>
+      <form action="/updatepassword" method="post" enctype="multipart/form-data">
+        <div class="mb-3">
+          <label for="">old password</label>
+          <input type="text" name="old_password" class="form-control">
+        </div>
+        <div class="mb-3">
+          <label for="">new password</label>
+          <input type="text" name="new_password" class="form-control">
+        </div>
+        <div class="mb-3">
+          <label for="">confirm password</label>
+          <input type="text" name="cpassword" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-info mb-2">submit</button>
+
+      </form>
+    </div>
+    <div class="col-md-6">
+      <h1>Update Profile</h1>
+      <br><br><br>
+      <form action="/updateprofile" method="post">
+        <div class="mb-3">
+          <label for="">Name</label>
+          <input type="text" name="name" class="form-control" value="<%= n %>">
+        </div>
+        <div class="mb-3">
+            <label for="">Email</label>
+            <input type="email" name="email" class="form-control" value="<%= e %>">
+          </div>
+        <div class="mb-3">
+          <label for="">image</label>
+          <input type="file" name="image" class="form-control">
+          <img src="<%= img.url %>" width="50px" alt="">
+        </div>
+        <button type="submit" class="btn btn-info mt-4">Update Profile</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+    <%- include('./footer.ejs') %>

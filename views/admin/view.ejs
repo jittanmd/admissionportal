@@ -1,0 +1,58 @@
+<%- include('../header.ejs') %>
+
+<br><br><br><br>
+
+    <div class="container mt-5">
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Mobile Number</th>
+                        <th>Address</th>
+                        <th>Gender</th>
+                        <th>Qualification</th>
+                        <th>Course</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <td>
+                            <%= c._id %>
+                        </td>
+                        <td>
+                            <%= c.name %>
+                        </td>
+                        <td>
+                            <%= c.email %>
+                        </td>
+                        <td>
+                            <%= c.mobile %>
+                        </td>
+                        <td>
+                            <%= c.address %>
+                        </td>
+                        <td>
+                            <%= c.gender %>
+                        </td>
+                        <td>
+                            <%= c.qualification %>
+                        </td>
+                        <td>
+                            <%= c.course %>
+                        </td>
+
+                    </tr>
+
+
+
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <%- include('../footer.ejs') %>
